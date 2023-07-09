@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-// mongoose.connect(process.env.MONGO_URL);
-mongoose.connect('mongodb://0.0.0.0/googleauth');
+mongoose.connect(process.env.MONGO_URL);
+// mongoose.connect('mongodb://0.0.0.0/googleauth');
 
 const db = mongoose.connection;
 
