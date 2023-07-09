@@ -1,12 +1,17 @@
 <header class="flex">
     <div>
-        <a href="/user/sign-up">sign-up</a>
-        <a href="/user/sign-in">sign-in</a>
+        <% if (locals.user){%>
+            <h4><%= locals.user.name%></h4>
+        
+        <%}else{%>
+            <a href="/user/sign-up">sign-up</a>
+            <a href="/user/sign-in">sign-in</a>            
+        <%}%>
     </div>
     <div class="grow"><h1>Welcome to Google Authentication Project</h1></div>
     <div>
     <% if(locals.user){%>
-        <h4><%= locals.user.name%></h4>
+        <!-- <h4><%= locals.user.name%></h4> -->
         <a href="/user/sign-out">sign-out</a>   
         <a href="/user/reset">Reset Password</a> 
     <%}else{%>

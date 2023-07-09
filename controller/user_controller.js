@@ -2,12 +2,17 @@ const User = require('../models/user');
 const bcrypt = require('bcrypt');
 
 module.exports.signIn = function(req, res){
-
+    if(req.isAuthenticated()){
+        return res.redirect('/');
+    }
     return res.render('signIn');
 }
 
 module.exports.signUp = function(req, res){
     try {
+        if(req.isAuthenticated()){
+            return res.redirect('/');
+        }
         
 
         return res.render('signUp');
