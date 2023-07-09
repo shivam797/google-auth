@@ -1,0 +1,16 @@
+<header class="flex">
+    <div></div>
+    <div class="grow"><h1>Welcome to Google Authentication Project</h1></div>
+    <div>
+    <% if(locals.user){%>
+        <h4><%= locals.user.name%></h4>
+        <a href="/user/sign-out">sign-out</a>   
+        <a href="/user/reset">Reset Password</a> 
+    <%}else{%>
+        <a href="/user/auth/google">sign in using google</a>
+        <a href="/reset/reset-page">forget password</a>    
+            
+    <%}%>
+    </div>
+    
+</header>

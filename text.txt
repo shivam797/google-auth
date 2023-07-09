@@ -1,0 +1,4 @@
+for node mailer:
+
+mail : googleauth
+pass: wvnkuotlalprdduy
