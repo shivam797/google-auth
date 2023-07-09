@@ -1,5 +1,8 @@
 <header class="flex">
-    <div></div>
+    <div>
+        <a href="/user/sign-up">sign-up</a>
+        <a href="/user/sign-in">sign-in</a>
+    </div>
     <div class="grow"><h1>Welcome to Google Authentication Project</h1></div>
     <div>
     <% if(locals.user){%>
@@ -7,6 +10,7 @@
         <a href="/user/sign-out">sign-out</a>   
         <a href="/user/reset">Reset Password</a> 
     <%}else{%>
+
         <a href="/user/auth/google">sign in using google</a>
         <a href="/reset/reset-page">forget password</a>    
             
